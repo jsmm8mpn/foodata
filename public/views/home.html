@@ -1,0 +1,40 @@
+<h2>Nutrition Search</h2>
+
+<md-autocomplete
+    md-selected-item="selectedItem"
+    md-search-text="searchText"
+    md-items="item in search(searchText)"
+    md-item-text="item.display"
+    md-min-length="0"
+    placeholder="Search for a food">
+  <md-item-template>
+    <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
+  </md-item-template>
+  <md-not-found>
+    No matches found for "{{searchText}}".
+  </md-not-found>
+</md-autocomplete>
+
+<md-input-container>
+  <label>Serving Size</label>
+  <md-select ng-model="servingSize">
+    <md-option ng-repeat="size in servingSizes" value="{{size.seq}}">{{size.amount}} - {{size.name}}</md-option>
+  </md-select>
+</md-input-container>
+
+<ng-include ng-if="selectedItem" src="'/public/views/facts.html'"></ng-include>
+
+<!--
+<table ng-if="nutrients">
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Percentage</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="(id,nut) in nutrients | orderBy:'compareVal':true">
+    <td>{{nut.name}}</td>
+    <td>{{getValue(nut.nutid) | number:2}} {{nut.units}}</td>
+    <td>{{getPercent(nut)}}</td>
+  </tr>
+</table>-->

@@ -1,0 +1,11 @@
+<div>
+  <input type="text" ng-model="text"/>
+  <button ng-click="search(text)">Search</button>
+</div>
+
+<table ng-if="results">
+  <tr ng-repeat="row in results">
+    <td>{{row.desclong}}</td>
+    <td>{{row.id}}</td>
+  </tr>
+</table>
