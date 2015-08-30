@@ -1,8 +1,18 @@
-<div>
-  <span>Calories</span>
-  <span>{{getValue(208)}}</span>
-</div>
-<div>
-  <span>Total Fat</span>
-  <span>{{getValue(204)}}</span>
-</div>
+<table>
+<tr>
+  <td>Calories {{getValue(208)}}</td>
+  <td>Calories from Fat {{getCaloriesFromFat()}}</td>
+</tr>
+<tr class="newSection">
+  <td>Total Fat {{getValue(204)}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td class="sub">Saturated Fat {{getValue(606)}}</td>
+  <td></td>
+</tr>
+<tr>
+  <td class="sub">Saturated Fat </td>
+  <td></td>
+</tr>
+</table>

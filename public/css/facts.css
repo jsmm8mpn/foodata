@@ -1,0 +1,16 @@
+.newSection td {
+  border-top: 2px solid black; 
+}
+
+table { 
+    border-collapse: collapse; 
+}
+
+td.sub {
+  padding-left: 20px;
+  font-style: italic;
+}
+
+td {
+  padding: 2px 10px; 
+}

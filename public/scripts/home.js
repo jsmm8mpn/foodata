@@ -1,5 +1,8 @@
 angular.module('foodata').controller('HomeCtrl', ['$scope', '$http', '$q', '$filter', function($scope, $http, $q, $filter) {
-  $scope.stuff = 'hello world';
+  
+  $scope.selectedItem = {
+    value: '01001'
+  };
   
   $scope.search = function(text) {
     var deferred = $q.defer();
